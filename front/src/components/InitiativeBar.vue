@@ -8,10 +8,15 @@ const props = defineProps({
   personnage: Personnage
 });
 
+interface InitiativeToken {
+  valeur: number;
+  image: string;
+}
+
 const initiativesState = ref([]);
 const initiativesRange = ref([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
 
-let initiatives = [];
+let initiatives: InitiativeToken[] = [];
 
 socket.onopen = function(event) {
   console.log("WS ouvert");
@@ -24,7 +29,7 @@ socket.onopen = function(event) {
 
       console.log(data);
 
-      data.resultats.flatMap(r => r.dices).filter(r => r >= 0).forEach(r => {
+      data.resultats.flatMap((r: any) => r.dices).filter((r: any) => r >= 0).forEach((r: any) => {
         initiatives.push({
           valeur: r,
           image

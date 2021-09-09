@@ -4,8 +4,8 @@ import { AttributKey, attributs, AttributValue, CaracteristiqueKey, caracteristi
 
 const socket = new WebSocket(location.origin.replace(/^http/, 'ws') + '/api');
 
-const attribut = ref<AttributKey>('');
-const competence = ref<CompetenceKey|CaracteristiqueKey>('');
+const attribut = ref<AttributKey>("Physique");
+const competence = ref<CompetenceKey|CaracteristiqueKey>("Force");
 const tendance = ref<boolean>(false);
 const diceResult = ref([]);
 const baseDommage = ref(2);

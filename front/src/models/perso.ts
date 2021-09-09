@@ -1,5 +1,5 @@
 export const caracteristiques = <const>['Force', 'Intelligence', 'Coordination', 'Presence', 'Resistance', 'Volonte', 'Perception', 'Empathie'];
-export const attributs = <const>['Physique', 'Mental', 'Manuel', 'Social'];
+export const attributs = <const>['Physique', 'Mental', 'Manuel', 'Social', 'Magie instinctive', 'Magie invocatoire', 'Sorcellerie'];
 export const competences = <const>[
     'Armes articulées',
     'Armes contondantes',
@@ -60,19 +60,23 @@ export const competences = <const>[
     'Eloquence',
     'Marchandage',
     'Psychologie',
-    'Art de la scène ()',
+    'Art de la scène',
     'Commandement',
     'Diplomatie',
     'Dressage',
     'Intimidation',
-    'Séduction'
+    'Séduction',
+    'Feu',
+    'Rêves',
+    'Cité',
+    'Non trouvé'
 ];
 
 export type CaracteristiqueKey = typeof caracteristiques[number];
 export type CaracteristiqueValue = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 
 export type AttributKey = typeof attributs[number];
-export type AttributValue = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+export type AttributValue = 0  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 
 export type InitiativeValue = 1 | 2 | 3 | 4 | 5;
 
@@ -99,7 +103,7 @@ export class Personnage {
         public image: string,
         public initiative: InitiativeValue,
         public caracteristiques: [Caracteristique, Caracteristique, Caracteristique, Caracteristique, Caracteristique, Caracteristique, Caracteristique, Caracteristique],
-        public attributs: [Attribut, Attribut, Attribut, Attribut],
+        public attributs: Attribut[],
         public competences: Competence[]
     ) {}
 }
@@ -182,6 +186,31 @@ export const personnages = [
         { key: 'Attelages', value: 3 },
         { key: 'Jeu', value: 2 },
         { key: 'Commandement', value: 1 }
+    ]),
+    new Personnage('Jeremias Scrivner', 'bragon.png', 3, [
+        { key: 'Force', value: 3 },
+        { key: 'Intelligence', value: 6 },
+        { key: 'Coordination', value: 4 },
+        { key: 'Presence', value: 5 },
+        { key: 'Resistance', value: 3 },
+        { key: 'Volonte', value: 8 },
+        { key: 'Perception', value: 6 },
+        { key: 'Empathie', value: 5 },
+    ], [
+        { key: 'Physique', value: 2 },
+        { key: 'Mental', value: 6 },
+        { key: 'Manuel', value: 5 },
+        { key: 'Social', value: 5 },
+        { key: 'Magie instinctive', value: 8 },
+        { key: 'Magie invocatoire', value: 7 },
+        { key: 'Sorcellerie', value: 0 }
+    ], [
+        { key: 'Connaissance de la magie', value: 4 },
+        { key: 'Vie en cité', value: 1 },
+        { key: 'Baratin', value: 3 },
+        { key: 'Eloquence', value: 1 },
+        { key: 'Art de la scène', value: 3 },
+        { key: 'Intimidation', value: 3 }
     ])
 ];
 

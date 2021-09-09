@@ -187,7 +187,7 @@ export const personnages = [
         { key: 'Jeu', value: 2 },
         { key: 'Commandement', value: 1 }
     ]),
-    new Personnage('Jeremias Scrivner', 'bragon.png', 3, [
+    new Personnage('Jeremias Scrivner', 'scrivener.png', 3, [
         { key: 'Force', value: 3 },
         { key: 'Intelligence', value: 6 },
         { key: 'Coordination', value: 4 },
@@ -212,7 +212,7 @@ export const personnages = [
         { key: 'Art de la scène', value: 3 },
         { key: 'Intimidation', value: 3 }
     ]),
-    new Personnage('Dalai', 'bragon.png', 3, [
+    new Personnage('Dalai', 'dalai.png', 3, [
         { key: 'Force', value: 4 },
         { key: 'Intelligence', value: 8 },
         { key: 'Coordination', value: 6 },

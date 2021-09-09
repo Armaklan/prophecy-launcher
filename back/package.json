@@ -10,7 +10,7 @@
     "fastify-websocket": "^4.0.0"
   },
   "devDependencies": {
-    "@types/node": "^16.7.13",
+    "@types/node": "^16.9.0",
     "typescript": "^4.4.2"
   },
   "scripts": {

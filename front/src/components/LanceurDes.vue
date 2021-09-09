@@ -21,7 +21,7 @@ function onSubmit() {
   const attributValue = searchAttributValue(props.personnage, attribut.value);
   const competenceValue = searchCompetenceValue(props.personnage, competence.value);
   
-  fetch('/api/dicer', { method: 'POST', body: JSON.stringify({
+  fetch('api/dicer', { method: 'POST', body: JSON.stringify({
     personnage: props.personnage?.name,
     image: props.personnage?.image,
     type: 'Test', 
@@ -34,7 +34,7 @@ function onSubmit() {
 }
 
 function onSubmitDommage() {
-  fetch('/api/dicer', { method: 'POST', body: JSON.stringify({
+  fetch('api/dicer', { method: 'POST', body: JSON.stringify({
     personnage: props.personnage?.name,
     image: props.personnage?.image,
     type: 'Dommage', 
@@ -44,7 +44,7 @@ function onSubmitDommage() {
 }
 
 function onSubmitInitiative() {
-  fetch('/api/initiative', { method: 'POST', body: JSON.stringify({
+  fetch('api/initiative', { method: 'POST', body: JSON.stringify({
     personnage: props.personnage?.name,
     image: props.personnage?.image,
     type: 'Initiative', 

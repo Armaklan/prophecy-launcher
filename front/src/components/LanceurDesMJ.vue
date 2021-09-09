@@ -19,17 +19,17 @@ const imageConteur = '/public/conteur.jpg';
 
 const avatars = [{
   name: 'Kalimshaar',
-  value: '/public/conteur.jpg'
+  value: process.env.BASE_URL + '/public/conteur.jpg'
 }, {
   name: 'Dragon1',
-  value: '/public/dragon1.jpg'
+  value: process.env.BASE_URL + '/public/dragon1.jpg'
 }, {
   name: 'Dragon2',
-  value: '/public/dragon2.jpg'
+  value: process.env.BASE_URL + '/public/dragon2.jpg'
 }]
 
 function onSubmit() {  
-  fetch('/api/dicer', { method: 'POST', body: JSON.stringify({
+  fetch('api/dicer', { method: 'POST', body: JSON.stringify({
     personnage: name,
     image: imageConteur,
     type: 'Test', 
@@ -42,7 +42,7 @@ function onSubmit() {
 }
 
 function onSubmitDommage() {
-  fetch('/api/dicer', { method: 'POST', body: JSON.stringify({
+  fetch('api/dicer', { method: 'POST', body: JSON.stringify({
     personnage: name,
     image: imageConteur,
     type: 'Dommage', 
@@ -53,7 +53,7 @@ function onSubmitDommage() {
 
 function onSubmitInitiative() {
   const imageInitiative = image.value;
-  fetch('/api/initiative', { method: 'POST', body: JSON.stringify({
+  fetch('api/initiative', { method: 'POST', body: JSON.stringify({
     personnage: name,
     image: imageInitiative,
     type: 'Initiative', 

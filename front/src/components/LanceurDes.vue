@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { AttributKey, attributs, AttributValue, CaracteristiqueKey, caracteristiques, CompetenceKey, competences, Personnage, personnages, searchAttributValue, searchCompetenceValue } from '../models/perso';
 
-const socket = new WebSocket(location.origin.replace(/^http/, 'ws') + '/api');
+const socket = new WebSocket(location.origin.replace(/^http/, 'ws') + '/api/');
 
 const attribut = ref<AttributKey>("Physique");
 const competence = ref<CompetenceKey|CaracteristiqueKey>("Force");

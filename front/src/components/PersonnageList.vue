@@ -16,6 +16,7 @@ function selectMj() {
 }
 
 const count = ref(0)
+
 </script>
 
 <template>
@@ -27,7 +28,7 @@ const count = ref(0)
       <span class="name">{{ personnage.name }}</span>
     </div>
     <div class="avatar" @click="selectMj()">
-      <el-avatar :size="150" src="/public/conteur.jpg"></el-avatar>
+      <el-avatar :size="150" src="public/conteur.jpg"></el-avatar>
       <span class="name">Conteur</span>
     </div>
   </div>

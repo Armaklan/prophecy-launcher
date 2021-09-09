@@ -7,7 +7,7 @@ const socket = new WebSocket(location.origin.replace(/^http/, 'ws') + '/api');
 const attribut = ref<number>(0);
 const competence = ref<number>(0);
 const tendance = ref<boolean>(false);
-const image = ref<string>('/public/conteur.jpg');
+const image = ref<string>('public/conteur.jpg');
 const diceResult = ref([]);
 const baseDommage = ref(2);
 const nbDesDommage = ref(1);
@@ -15,17 +15,17 @@ const nbDesInitiatives = ref(3);
 const activeTab = ref('test');
 
 const name = 'Conteur';
-const imageConteur = '/public/conteur.jpg';
+const imageConteur = 'public/conteur.jpg';
 
 const avatars = [{
   name: 'Kalimshaar',
-  value: process.env.BASE_URL + '/public/conteur.jpg'
+  value: 'public/conteur.jpg'
 }, {
   name: 'Dragon1',
-  value: process.env.BASE_URL + '/public/dragon1.jpg'
+  value: 'public/dragon1.jpg'
 }, {
   name: 'Dragon2',
-  value: process.env.BASE_URL + '/public/dragon2.jpg'
+  value: 'public/dragon2.jpg'
 }]
 
 function onSubmit() {  
@@ -181,7 +181,7 @@ socket.onopen = function(event) {
             <p v-for="r in result.resultats">
               {{ r.dices.join(', ') }}
             </p>
-          </div>
+          </div> 
         </div>
       </div>
     </div>

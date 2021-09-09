@@ -7,7 +7,7 @@ const socket = new WebSocket(location.origin.replace(/^http/, 'ws') + '/api');
 const attribut = ref<number>(0);
 const competence = ref<number>(0);
 const tendance = ref<boolean>(false);
-const image = ref<string>('public/conteur.jpg');
+const image = ref<string>('conteur.jpg');
 const diceResult = ref([]);
 const baseDommage = ref(2);
 const nbDesDommage = ref(1);
@@ -15,17 +15,17 @@ const nbDesInitiatives = ref(3);
 const activeTab = ref('test');
 
 const name = 'Conteur';
-const imageConteur = 'public/conteur.jpg';
+const imageConteur = 'conteur.jpg';
 
 const avatars = [{
   name: 'Kalimshaar',
-  value: 'public/conteur.jpg'
+  value: 'conteur.jpg'
 }, {
   name: 'Dragon1',
-  value: 'public/dragon1.jpg'
+  value: 'dragon1.jpg'
 }, {
   name: 'Dragon2',
-  value: 'public/dragon2.jpg'
+  value: 'dragon2.jpg'
 }]
 
 function onSubmit() {  

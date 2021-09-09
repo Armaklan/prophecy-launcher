@@ -104,7 +104,7 @@ export class Personnage {
 
 
 export const personnages = [
-    new Personnage('Edonan', 'public/edonan.png', 3, [
+    new Personnage('Edonan', 'edonan.png', 3, [
         { key: 'Force', value: 6},
         { key: 'Intelligence', value: 4 },
         { key: 'Coordination', value: 5 },
@@ -124,7 +124,7 @@ export const personnages = [
         { key: 'Armes de choc', value: 0 },
         { key: 'Corps à corps', value: 2 }
     ]),
-    new Personnage('Bragon', 'public/bragon.png', 3, [
+    new Personnage('Bragon', 'bragon.png', 3, [
         { key: 'Force', value: 6 },
         { key: 'Intelligence', value: 4 },
         { key: 'Coordination', value: 5 },

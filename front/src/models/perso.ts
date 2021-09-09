@@ -211,6 +211,35 @@ export const personnages = [
         { key: 'Eloquence', value: 1 },
         { key: 'Art de la scène', value: 3 },
         { key: 'Intimidation', value: 3 }
+    ]),
+    new Personnage('Dalai', 'bragon.png', 3, [
+        { key: 'Force', value: 4 },
+        { key: 'Intelligence', value: 8 },
+        { key: 'Coordination', value: 6 },
+        { key: 'Presence', value: 3 },
+        { key: 'Resistance', value: 5 },
+        { key: 'Volonte', value: 6 },
+        { key: 'Perception', value: 5 },
+        { key: 'Empathie', value: 3 },
+    ], [
+        { key: 'Physique', value: 5 },
+        { key: 'Mental', value: 7 },
+        { key: 'Manuel', value: 4 },
+        { key: 'Social', value: 2 }
+    ], [
+        { key: 'Armes tranchantes', value: 5 },
+        { key: 'Athlétisme', value: 4 },
+        { key: 'Castes', value: 6 },
+        { key: 'Connaissance des dragons', value: 9 },
+        { key: 'Histoire', value: 6 },
+        { key: 'Lois', value: 1 },
+        { key: 'Alchimie', value: 5 },
+        { key: 'Herboristerie', value: 4 },
+        { key: 'Lire et écrire', value: 5 },
+        { key: 'Premiers soins', value: 4 },
+        { key: 'Discrétion', value: 2 },
+        { key: 'Baratin', value: 1 },
+        { key: 'Psychologie', value: 4 }
     ])
 ];
 

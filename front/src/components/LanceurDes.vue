@@ -170,6 +170,8 @@ socket.onopen = function(event) {
           <b>{{ result.attribut }} - {{ result.competence}}</b>
           <p v-for="de in result.resultats">
             {{ de.type }} {{ de.dice }} ( {{ de.finalResult }})
+            <span v-if="de.reussiteCritique"> Réussite critique </span>
+            <span v-if="de.echecCritique"> Echec critique </span>
           </p>
         </div>
         <div class="result" v-if="result.type === 'Dommage'">
